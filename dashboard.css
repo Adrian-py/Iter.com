@@ -64,7 +64,7 @@ main .dashboard {
   height: 92%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
   grid-gap: 5%;
 }
 
@@ -201,8 +201,9 @@ main .dashboard {
 
 .dashboard__plans__list {
   width: 95%;
-  height: 88%;
+  height: 85%;
   overflow: scroll;
+  box-shadow: inset 0px 11px 8px -12px #ccc, inset 0px -11px 8px -12px #ccc;
 }
 
 .dashboard__plans__list::-webkit-scrollbar {
@@ -254,6 +255,7 @@ main .dashboard {
 
   .dashboard__categories__list__button {
     width: 38%;
+    height: 3.2rem;
   }
 
   .dashboard__plans__list__button {

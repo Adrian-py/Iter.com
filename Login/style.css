@@ -42,6 +42,10 @@ main > div {
   left: -1.5rem;
 }
 
+.form__logo svg {
+  width: 100%;
+}
+
 .form__input {
   width: 100%;
   height: 75%;
@@ -93,7 +97,7 @@ main > div {
 }
 
 .form__remember {
-  width: 50%;
+  width: 70%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -125,18 +129,125 @@ main > div {
 
 .form__register h2 {
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .image {
-  background: url("./decorative\ picture.jpg");
+  background: url("./assets/decorative\ picture.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center center;
 }
 
-/* 1440px */
-@media only screen and (max-width: 90em) {
+/* Large - 1600, 1536, 1440 */
+@media only screen and (max-width: 100em) {
   .form__input h1 {
     font-size: 1.85rem;
+  }
+}
+
+/* Medium - 1366, 1280*/
+@media only screen and (max-width: 85.375em) {
+  .form {
+    padding-left: 9%;
+    padding-right: 9%;
+  }
+  .form__logo {
+    width: 35%;
+  }
+  .form__input h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Small - 1024x768 */
+@media only screen and (max-width: 64em) {
+  .form {
+    width: 55%;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+  .form__input h1 {
+    font-size: 1.7rem;
+  }
+  .form__input__label {
+    font-size: 1.6rem;
+  }
+  .form__input__field {
+    height: 3rem;
+  }
+  .form__register h2 {
+    font-size: 1.1rem;
+  }
+  .image {
+    width: 45%;
+  }
+}
+
+/* Tablet - 768x1024 */
+@media only screen and (max-width: 48em) {
+  .form {
+    width: 100%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    background: url("./assets/decorative\ picture\ \(mobile\).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .form__input h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: black;
+  }
+  .form__input__label,
+  #remember {
+    font-weight: 700;
+  }
+  #remember {
+    font-size: 1.5rem;
+  }
+  #form__remember__input {
+    transform: scale(1.75);
+  }
+  .form__register h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  .image {
+    display: none;
+  }
+}
+
+/* Phone - 360x640 */
+@media only screen and (max-width: 26.5625em) {
+  .form {
+    padding: 15% 9%;
+  }
+  .form__logo {
+    left: -0.5rem;
+  }
+  .form__input h1 {
+    font-size: 1.125rem;
+  }
+  .form__input__label {
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  #remember {
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  #form__remember__input {
+    transform: scale(1.2);
+  }
+  #submit {
+    width: 6.62rem;
+    height: 2.76rem;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .form__register h2 {
+    font-size: 0.85rem;
   }
 }

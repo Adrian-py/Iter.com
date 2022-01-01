@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iter.com | Set up your preferences</title>
+    <link rel="stylesheet" href="./preferences.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Let's get to know <span id="blue">you</span> better</h1>
+      <form action="">
+        <label for="preferences" class="form__input__label"
+          >What type of places do you like?</label
+        >
+        <div class="form__container">
+          <select name="preferences" id="form__input__select">
+            <option value="">Select an option&hellip;</option>
+            <option value="OpenSpaces">Open Spaces</option>
+            <option value="OpenSpaces">Open Spaces1</option>
+            <option value="OpenSpaces">Open Spaces2</option>
+            <option value="OpenSpaces">Open Spaces3</option>
+            <option value="OpenSpaces">Open Spaces4</option>
+          </select>
+          <div class="custom__arrow"></div>
+        </div>
+        <input type="submit" id="add" value="Add" />
+      </form>
+      <section class="choosen">
+        <div class="choosen_preference">Open Spaces</div>
+        <div class="choosen_preference">Beaches</div>
+        <div class="choosen_preference">Mountains</div>
+        <div class="choosen_preference">Forests</div>
+      </section>
+      <a class="continue" id="continue" href="../Dashboard/dashboard.html">
+        continue >>
+      </a>
+    </main>
+  </body>
+</html>

@@ -1,3 +1,6 @@
+/* ===========
+ Global Styles 
+ =========== */
 * {
   padding: 0;
   margin: 0;
@@ -23,10 +26,13 @@ body {
   color: var(--primary);
 }
 
+/* ===========
+ Main Container
+ =========== */
 main {
   width: 100%;
   height: 100%;
-  padding: 8rem 5% 2% 5%;
+  padding: 10% 5% 2% 5%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -38,6 +44,9 @@ main h1 {
   margin-bottom: 3.476%;
 }
 
+/* ===========
+     Form
+ =========== */
 main form {
   width: 48.96%;
   display: flex;
@@ -55,6 +64,9 @@ main form label {
   margin-bottom: 3.387%;
 }
 
+/* ===========
+ Custom Dropdown
+ =========== */
 main form #form__input__select {
   width: 100%;
   height: 3.5rem;
@@ -105,16 +117,157 @@ main form #form__input__select {
   cursor: pointer;
 }
 
+/* ===========
+    Choosen
+ =========== */
 .choosen {
   width: 80%;
   height: 40%;
-  background: red;
+  overflow-y: scroll;
 }
 
+.choosen::-webkit-scrollbar {
+  display: none;
+}
+
+.choosen__grid {
+  width: 100%;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 2.5%;
+}
+
+.choosen__preference__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choosen__preference {
+  position: relative;
+  padding: 5% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  border: 5px solid var(--primary);
+  border-radius: 50px;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.choosen__preference::before {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  transition: all 150ms ease-in-out;
+}
+
+.choosen__preference:hover::before,
+.choosen__preference:hover::after {
+  opacity: 1;
+}
+
+.choosen__preference::after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  background-image: url("./assets/delete-icon.svg");
+}
+
+/* ===========
+ Continue Button
+ =========== */
 #continue {
   margin-top: auto;
   font-weight: 700;
   color: var(--primary);
   text-decoration: none;
   align-self: flex-end;
+}
+
+/* ===========
+  Media Query
+ =========== */
+/* Large - 1600, 1536, 1440 */
+@media only screen and (max-width: 100em) {
+}
+
+/* Height - <768 */
+@media only screen and (max-height: 45em) {
+  main {
+    padding-top: 2%;
+  }
+}
+
+/* Medium - 1366, 1280*/
+@media only screen and (max-width: 85.375em) {
+}
+
+/* Small - 1024x768 */
+@media only screen and (max-width: 64em) {
+  main h1 {
+    font-size: 3rem;
+  }
+  main form {
+    width: 70%;
+  }
+}
+
+/* Tablet - 768x1024 */
+@media only screen and (max-width: 48em) {
+  main h1 {
+    font-size: 2.5rem;
+  }
+  main form {
+    width: 90%;
+    margin-bottom: 10%;
+  }
+}
+
+/* Phone - 360x640 */
+@media only screen and (max-width: 26.5625em) {
+  main {
+    padding-top: 8%;
+    padding-bottom: 8%;
+  }
+  main h1 {
+    font-size: 1.25rem;
+    margin-bottom: 10%;
+  }
+  main form {
+    margin-bottom: 6%;
+  }
+  main form label {
+    font-size: 1.1rem;
+    margin-bottom: 2.5%;
+  }
+  .form__container {
+    margin-bottom: 6%;
+  }
+  main form #form__input__select {
+    height: 3rem;
+    font-size: 1rem;
+  }
+  #add {
+    width: 8rem;
+    height: 4rem;
+    font-size: 2rem;
+  }
+  .choosen {
+    height: 51%;
+  }
+  .choosen__grid {
+    gap: 1%;
+  }
 }

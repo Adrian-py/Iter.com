@@ -114,7 +114,12 @@ main form #form__input__select {
   border-radius: 50px;
   outline: none;
   align-self: center;
+  transition: all 100ms ease-in-out;
   cursor: pointer;
+}
+
+#add:hover {
+  font-size: 2.65rem;
 }
 
 /* ===========

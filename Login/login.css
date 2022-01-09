@@ -133,10 +133,18 @@ main > div {
 }
 
 .image {
-  background: url("./assets/decorative\ picture.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  overflow: hidden;
+}
+
+#image--desktop {
+  width: 100%;
+}
+
+#image--mobile {
+  display: none;
 }
 
 /* Large - 1600, 1536, 1440 */
@@ -186,11 +194,13 @@ main > div {
 
 /* Tablet - 768x1024 */
 @media only screen and (max-width: 48em) {
+  body {
+    overflow: hidden;
+  }
   .form {
     width: 100%;
     padding-top: 6%;
     padding-bottom: 6%;
-    background: url("./assets/decorative\ picture\ \(mobile\).jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -216,6 +226,14 @@ main > div {
   }
   .image {
     display: none;
+  }
+  #image--mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    z-index: -1;
   }
 }
 
